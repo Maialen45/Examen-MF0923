@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Técnico de Sistemas</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">TechSpecs Manager</span>
+      </div>
+    </nav>
+    <section class="form">
+      <div class="form-container">
+        <h2>Agregar Equipo</h2>
+        <form id="server-form">
+          <div class="form-group">
+            <label for="servidor">Nombre del Servidor</label>
+            <input
+              type="text"
+              class="form-control"
+              id="servidor"
+              placeholder="Nombre del servidor"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="cpu">CPU</label>
+            <select class="form-control" id="cpu" required>
+              <option value="0" disabled selected>Seleccionar CPU</option>
+              <option value="200|Intel Core i5">Intel i5 - 200€</option>
+              <option value="400|Intel Core i7">Intel i7 - 400€</option>
+              <option value="220|AMD Ryzen 5 5600X">
+                AMD Ryzen 5 5600X - 220€
+              </option>
+              <option value="370|AMD Ryzen 5 5800X">
+                AMD Ryzen 7 5800X - 370€
+              </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ram">RAM</label>
+            <select class="form-control" id="ram" required>
+              <option value="0" disabled selected>Seleccionar RAM</option>
+              <option value="45|8GB DDR4">8GB - 45€</option>
+              <option value="120|16GB DDR4">16GB - 120€</option>
+              <option value="200|32GB DDR4">32GB - 200€</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="almacenamiento">Almacenamiento</label>
+            <select class="form-control" id="almacenamiento" required>
+              <option value="0" disabled selected>
+                Seleccionar Almacenamiento
+              </option>
+              <option value="70|500GB SSD">500GB SSD - 70€</option>
+              <option value="150|1TB SSD">1TB SSD - 150€</option>
+              <option value="200|2TB SSD">2TB SSD - 200€</option>
+            </select>
+          </div>
+          <div class="form-group precio">
+            <span id="total-price-text">0€</span>
+          </div>
+          <button type="submit" class="btn btn-primary form-btn">
+            Agregar Configuración
+          </button>
+        </form>
+      </div>
+
+      <div id="server-cards" class="cards-container"></div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
